@@ -7,10 +7,9 @@ const Navbar = () => {
         <nav>
           <Link to="/" className="logo">Fotoportfolio</Link>
             <ul>
-                <Link to="/Home">Home</Link> 
-                <Link to="/Gallery">Gallery</Link>
-                <Link to="/About">About</Link>
-                <Link to="/Contact">Contact</Link>
+                <Link to="/gallery">Gallery</Link>
+                <Link to="/about">About</Link>
+                <Link to="/contact">Contact</Link>
                 
             </ul>
             <button> Dark Mode </button>

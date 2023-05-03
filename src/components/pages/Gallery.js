@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 function Gallery() {
   return (
@@ -7,18 +7,15 @@ function Gallery() {
       <h1>This is the Gallery page</h1>
       <nav>
         <ul>
-          {/* 
-
-          Få länkarna att visas på sidan nästa gång.
-
-          */}
-          <Link to="/Landscape"></Link>
-          <Link to="/Portraits"></Link>
-          <Link to="/Buildings"></Link>
-          {/* <button><a href="/Landscape">Landscape</a></button>
-          <button><a href="/Portraits">Portraits</a></button>
-          <button><a href="/Buildings">Buildings</a></button> */}
+          <Link to="/gallery/landscape">Landscape</Link>
+          <Link to="/gallery/portraits">Portraits</Link>
+          <Link to="/gallery/buildings">Buildnings</Link>
         </ul>
+        {/* 
+        Outlet är för child-components 
+        (måste ha med för att undermenyn ska synas/renderas) 
+        */}
+        <Outlet />
 
       </nav>
     </div>

@@ -7,7 +7,8 @@ import About from './components/pages/About.js';
 import Contact from './components/pages/Contact.js';
 import Home from './components/pages/Home.js';
 import Landscape from './components/pages/Landscape.js';
-
+import Portraits from './components/pages/Portraits.js'
+import Buildings from './components/pages/Buildings.js';
 
 function App() {
   return (
@@ -18,7 +19,9 @@ function App() {
         < Route path="/" element={<Home />} />
         
         <Route path="/gallery" element={<Gallery />}>
-        <Route path="/gallery/landscape" element={<Landscape />} />
+          <Route path="/gallery/landscape" element={<Landscape />} />
+          <Route path="/gallery/portraits" element={<Portraits />} />
+          <Route path="/gallery/buildings" element={<Buildings />} />
         </Route>
         
        < Route path="/about" element={<About />} />
