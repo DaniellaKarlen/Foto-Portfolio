@@ -10,35 +10,52 @@ import Landscape from './components/pages/Landscape.js';
 import Portraits from './components/pages/Portraits.js'
 import Buildings from './components/pages/Buildings.js';
 import Faq from './components/pages/Faq';
+import { createClient } from 'pexels';
 
 
 import { useState, useEffect } from 'react';
 
 const apiKey = "rO5wy1MyCnvw7QkFSIX0FdsKbvqByttjZIWBA5aXwyD94enoJcqAameR"
-const url = "https://images.pexels.com/photos/3573351/pexels-photo-3573351.png?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+const url = `https://api.pexels.com/vi/collections${apiKey}`
+
+
+
+const client = createClient('rO5wy1MyCnvw7QkFSIX0FdsKbvqByttjZIWBA5aXwyD94enoJcqAameR');
+
+client.collections.all({ per_page: 3 }).then(collections => {
+  console.log(collections)
+
+  
+
+
+  
+
+});
+
 
 function App() {
-  const [images, setImages] = useState([]);
+// const [images, setImages] = useState([]);
 
-  const FetchData = () => {
+//   const FetchData = () => {
 
-    useEffect(() => {
-      const fetchData = async () => {
-        try {
-          const response = await fetch(url);
-          const images = await response.json();
+//     useEffect(() => {
+//       const fetchData = async () => {
+//         try {
+//           const response = await fetch(url);
+//           const images = await response.json();
+//           console.log(images);
 
-        } catch (error) {
-          console.log(error);
-        }
-      }
-      fetchData();
-    }, []);
-  }
+//         } catch (error) {
+//           console.log(error);
+//         }
+//       }
+//       fetchData();
+//     }, []);
+//   }
 
-  FetchData();
+//   FetchData();
   
-  return (
+  return(
     <>
     < Navbar />
     <div className='container'>
@@ -55,12 +72,11 @@ function App() {
         < Route path="/contact" element={<Contact />} />
         < Route path="/faq" element={<Faq />} />
       </Routes>
-      
-
-        
     </div>
-    </>
-  )
+  </>
+)
 }
+
+
 
 export default App;
