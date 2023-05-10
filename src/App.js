@@ -10,52 +10,10 @@ import Landscape from './components/pages/subPages/Landscape.js';
 import Portraits from './components/pages/subPages/Portraits.js'
 import Buildings from './components/pages/subPages/Buildings.js';
 import Faq from './components/pages/Faq';
-import { createClient } from 'pexels';
 
-
-
-
-import { useState, useEffect } from 'react';
-
-const apiKey = "rO5wy1MyCnvw7QkFSIX0FdsKbvqByttjZIWBA5aXwyD94enoJcqAameR"
-const url = `https://api.pexels.com/vi/collections${apiKey}`
-
-
-
-const client = createClient('rO5wy1MyCnvw7QkFSIX0FdsKbvqByttjZIWBA5aXwyD94enoJcqAameR');
-
-client.collections.all({ per_page: 3 }).then(collections => {
-  console.log(collections)
-
-  
-
-
-  
-
-});
 
 
 function App() {
-// const [images, setImages] = useState([]);
-
-//   const FetchData = () => {
-
-//     useEffect(() => {
-//       const fetchData = async () => {
-//         try {
-//           const response = await fetch(url);
-//           const images = await response.json();
-//           console.log(images);
-
-//         } catch (error) {
-//           console.log(error);
-//         }
-//       }
-//       fetchData();
-//     }, []);
-//   }
-
-//   FetchData();
   
   return(
     <>
