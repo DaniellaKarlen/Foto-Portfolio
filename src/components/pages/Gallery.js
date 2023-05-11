@@ -1,39 +1,48 @@
 import React, { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { landscapeImg } from '../../db/imageDB';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Gallery.css';
-// import landscapeImgHeader from 'https://images.unsplash.com/photo-1511576661531-b34d7da5d0bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+import { landscapeImg, portraitImg, buildingImg } from '../../db/imageDB.js';
+// import imageDB from '../../db/imageDB';
 
 function Gallery() {
   const navigate = useNavigate();
- let img =  landscapeImg[0]
- console.log(img, img.id)
-  
 
-  // let Images = [];
-  
-  
+ let firstLandscape = landscapeImg[0];
+ let firstPortrait = portraitImg[0];
+ let firstBuilding = buildingImg[0];
 
   return (
+   
     <div>
       <h1>This is the Gallery page</h1>
 
       <nav>
-        <ul>
-          <div className='landscape-card'>
-            <div className='landscape-card-info'>
+        <ul className='card-container'>
+          <div className='card landscape-card'>
+            <div className='card-info'>
               <h1>Landscape</h1>
-              {/* <button><Link to="/gallery/landscape">See more Landscape</Link></button> */}
-              <button onClick={() => {navigate('/gallery/landscape')}}>see more landscape</button>
+              {/* <button><Link to="/gallery/landscape">See more Landscape</Link></button> // exempel 1 , exempel 2 nedan */}
+              <button className='gallery-btn' onClick={() => {navigate('/gallery/landscape')}}>see more landscapes</button> 
             </div>
-           <img src={img.url} alt="headerimg"></img>
+           <img key={firstLandscape.id} src={firstLandscape.url} alt="headerimg"></img>
           </div>
-          <div className='portrait-card'>
-            <Link to="/gallery/portraits">Portraits</Link>
+          <div className='card portrait-card'>
+            <div className='card-info'>
+              <h1>Portrait</h1>
+              {/* <button><Link to="/gallery/landscape">See more Landscape</Link></button> // exempel 1 , exempel 2 nedan */}
+              <button className='gallery-btn' onClick={() => {navigate('/gallery/portraits')}}>see more portraits</button> 
+            </div>
+           <img key={firstPortrait.id} src={firstPortrait.url} alt="headerimg"></img>
           </div>
-          <div className='building-card'>
-            <Link to="/gallery/buildings">Buildnings</Link>
+          
+          <div className='card building-card'>
+            <div className='card-info'>
+              <h1>Buildings</h1>
+              {/* <button><Link to="/gallery/landscape">See more Landscape</Link></button> // exempel 1 , exempel 2 nedan */}
+              <button className='gallery-btn' onClick={() => {navigate('/gallery/buildings')}}>see more landscape</button> 
+            </div>
+           <img key={firstBuilding.id} src={firstBuilding.url} alt="headerimg"></img>
           </div>
           
         </ul>
