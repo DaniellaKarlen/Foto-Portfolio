@@ -33,7 +33,7 @@ function Gallery() {
               {/* <button><Link to="/gallery/landscape">See more Landscape</Link></button> // exempel 1 , exempel 2 nedan */}
               <button className='gallery-btn' onClick={() => {navigate('/gallery/portraits')}}>see more portraits</button> 
             </div>
-           <img key={firstPortrait.id} src={firstPortrait.url} alt="headerimg"></img>
+           <img className='img-background' key={firstPortrait.id} src={firstPortrait.url} alt="headerimg"></img>
           </div>
           
           <div className='card building-card'>
