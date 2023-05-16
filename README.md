@@ -1,1 +1,1 @@
-(Sideprojkect) Building a photo portfolio in ReactJs from scratch
+(Side project) Building a photo portfolio in ReactJs from scratch
