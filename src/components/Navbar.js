@@ -1,16 +1,16 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
 
       
         <nav>
-          <Link to="/" className="logo">Fotoportfolio</Link>
+          <NavLink to="/" className="logo">Fotoportfolio</NavLink>
             <ul>
-                <Link to="/gallery">Gallery</Link>
-                <Link to="/about">About</Link>
-                <Link to="/contact">Contact</Link>
-                <Link to="/faq">FAQ</Link>
+                <NavLink to="/gallery" end>Gallery</NavLink>
+                <NavLink to="/about">About</NavLink>
+                <NavLink to="/contact">Contact</NavLink>
+                <NavLink to="/faq">FAQ</NavLink>
                 
             </ul>
             <button> Dark Mode </button>

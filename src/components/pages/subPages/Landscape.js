@@ -1,6 +1,9 @@
 import { landscapeImg } from "../../../db/imageDB"
 
+
 const Landscape = () => {
+
+
   return (
     <div>
       {landscapeImg.map((imges)=>{
@@ -12,6 +15,7 @@ const Landscape = () => {
       
       )})}
     </div>
+    
 
     
   )

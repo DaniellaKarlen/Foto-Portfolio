@@ -17,20 +17,20 @@ function App() {
   
   return(
     <>
-    < Navbar />
     <div className='container'>
       <Routes>
-        < Route path="/" element={<Home />} />
+        < Route path="/" element={<Home />} >
         
         <Route path="/gallery" element={<Gallery />}>
-          <Route path="/gallery/landscape" element={<Landscape />} />
-          <Route path="/gallery/portraits" element={<Portraits />} />
-          <Route path="/gallery/buildings" element={<Buildings />} />
+          <Route path="landscape" element={<Landscape />} />
+          <Route path="portraits" element={<Portraits />} />
+          <Route path="buildings" element={<Buildings />} />
         </Route>
         
-       < Route path="/about" element={<About />} />
+        < Route path="/about" element={<About />} />
         < Route path="/contact" element={<Contact />} />
         < Route path="/faq" element={<Faq />} />
+        </Route>
       </Routes>
     </div>
   </>
